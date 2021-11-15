@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+}
+
+#about {
+    width: 10%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#nyk {
+    width: 300px;
+    font-family: "courier new";
+    text-align: left;
+    margin: auto;
+    line-height: 1.5;
+}
+
+#nyk {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.nav-links a:hover {
+    font-size: 14px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+button {
+	border: 1px solid #808080;
+	padding: 10px 20px;
+	margin: 10px 0;
+	color: #000000;
+	font-weight: bold;
+	outline: none;
+	transition: 0.8s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);			
+}
+
+button:hover {
+	background-color: #5d4954;
+	color: #ffffff;
+	border: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 30%;
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    } 
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 6vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
