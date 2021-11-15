@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navimation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h4 id="heading">The Navimation</h4>
+        </div>
+        <ul class="nav-links"> 
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div id="about">
+        <button onclick="ywk()"><b>Click Me!</b></button>
+    </div>
+
+    <div id="nyk">
+        <p>Hi there, <br /> This page was created to show a few JavaScript tricks.
+        <br />
+        Please reduce your browser size to see my animated navigation bar.
+        <br />
+        And test the buttons below to see simple effects.
+        </p>
+    </div>
+
+    <div class="container">
+		<button onclick = "changeHeading()">Change Heading</button>
+		<button onmouseover = "changeBgc()" onmouseout = "normalBgc()">Change background color</button>
+	</div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
